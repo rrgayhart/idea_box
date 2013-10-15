@@ -5,6 +5,9 @@ require 'bundler'
 Bundler.require
 #require 'idea_box'
 class IdeaBoxApp < Sinatra::Base
+  configure :development do
+    register Sinatra::Reloader
+  end
   # set :root, '../lib/app'
   # set :method_override, true
 
