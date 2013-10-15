@@ -1,7 +1,7 @@
-set :root, './'
-require 'app'
-require 'idea.rb'
-require 'ideabox.rb'
-require 'user.rb'
-require 'ideas.rb'
+require './views/index'
+require './app'
+require './idea'
+require './ideabox'
+require './user'
+require '/ideas'
 run Sinatra::Application
