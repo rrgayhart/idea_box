@@ -1,11 +1,11 @@
 #require File.expand_path('.../idea_box/lib/app.rb', __FILE__)
-require_relative '../lib/app.rb'
+require_relative '../lib/app_engine.rb'
 require 'test/unit'
 require 'rack/test'
 
 ENV['RACK_ENV'] = 'test'
 
-class AppTest < Test::Unit::TestCase
+class AppEngineTest < Test::Unit::TestCase
   include Rack::Test::Methods
 
   def app

@@ -1,0 +1,13 @@
+require 'rubygems'
+require 'bundler/setup'
+require 'sinatra'
+#require 'idea_box'
+#class IdeaBoxApp < Sinatra::Base
+  set :root, '../lib/app'
+  #set :method_override, true
+
+get '/' do
+  erb :index
+end
+
+#end
