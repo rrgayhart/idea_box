@@ -3,7 +3,8 @@ require 'rubygems'
 require 'sinatra/base'
 require 'bundler'
 Bundler.require
-#require 'idea_box'
+require 'idea'
+
 class IdeaBoxApp < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
@@ -11,10 +12,15 @@ class IdeaBoxApp < Sinatra::Base
   not_found do
     erb :error
   end
-  # set :root, '../lib/app'
-  # set :method_override, true
 
   get '/' do
      erb :index
   end
+
+  post '/' do
+    idea = Idea.new
+    idea.save
+    "Creating an IDEA!"
+  end
+
 end
