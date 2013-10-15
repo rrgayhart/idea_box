@@ -5,6 +5,7 @@ require 'bundler'
 Bundler.require
 require "idea"
 
+
 class IdeaBoxApp < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
