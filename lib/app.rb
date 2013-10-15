@@ -7,7 +7,6 @@ require 'sinatra'
   #set :method_override, true
 
 get '/' do
-
   erb :index
 end
 
