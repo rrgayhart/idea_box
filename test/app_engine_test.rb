@@ -1,5 +1,5 @@
 #require File.expand_path('.../idea_box/lib/app.rb', __FILE__)
-require_relative '../lib/app_engine.rb'
+require_relative "../lib/app_engine.rb"
 #require_relative '..lib/idea_box/idea.rb'
 require 'test/unit'
 require 'rack/test'

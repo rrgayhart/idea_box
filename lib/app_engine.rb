@@ -3,7 +3,7 @@ require 'rubygems'
 require 'sinatra/base'
 require 'bundler'
 Bundler.require
-require 'idea'
+require "idea"
 
 class IdeaBoxApp < Sinatra::Base
   configure :development do
