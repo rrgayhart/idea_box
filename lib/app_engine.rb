@@ -8,6 +8,9 @@ class IdeaBoxApp < Sinatra::Base
   configure :development do
     register Sinatra::Reloader
   end
+  not_found do
+    erb :error
+  end
   # set :root, '../lib/app'
   # set :method_override, true
 
