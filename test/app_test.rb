@@ -1,8 +1,9 @@
 #require File.expand_path('.../idea_box/lib/app.rb', __FILE__)
+require_relative '../lib/app.rb'
 require 'test/unit'
 require 'rack/test'
 
-require_relative 'app'
+ENV['RACK_ENV'] = 'test'
 
 class AppTest < Test::Unit::TestCase
   include Rack::Test::Methods
@@ -11,14 +12,9 @@ class AppTest < Test::Unit::TestCase
     Sinatra::Application
   end
   
-  def test_my_default
+  def test_it_moves_to_index
     get '/'
     assert last_response.ok?
-    assert_equal 'Welcome to my page!', last_response.body
-  end
-
-  def test_with_params
-    post '/', :name => 'Frank'
-    assert_equal 'Hello Frank!', last_response.body
+    assert_equal 200, last_response.status
   end
 end
