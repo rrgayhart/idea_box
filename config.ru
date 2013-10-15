@@ -1,3 +1,4 @@
+set :root, './'
 require './app'
 require './idea.rb'
 require './ideabox.rb'
