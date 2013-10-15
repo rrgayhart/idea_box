@@ -1,4 +1,11 @@
+require 'yaml/store'
+
 class Idea
+  attr_reader :title, :description
+  
+  def initialize(title, description)
+  end
+
   def save
     database.transaction do |db|
       db['ideas'] ||= []
