@@ -3,4 +3,4 @@ source 'https://rubygems.org'
 gem 'sinatra', require: 'sinatra/base'
 gem 'sinatra-contrib', require: 'sinatra/reloader'
 gem 'rack'
-gem 'rack-test'
+gem 'rack-test', require: false
