@@ -10,8 +10,12 @@ class IdeaStore
     ideas
   end
 
+  def self.fresh_database
+    { "ideas" => [] }.to_yaml
+  end
+
   def self.destroy_all
-    File.write(idea_box_file_path, "")
+    File.write(idea_box_file_path, fresh_database)
   end
 
   def self.idea_box_file_path

@@ -6,6 +6,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require 'rack/test'
 require 'app_engine'
+require 'idea_box'
 
 ENV['RACK_ENV'] = 'test'
 
@@ -13,7 +14,7 @@ class AppEngineTest < Minitest::Test
   include Rack::Test::Methods
 
   def setup
-    IdeaStore.environment = 'test'
+    IdeaStore.environment = 'test_engine'
     IdeaStore.destroy_all
     assert_equal 0, IdeaStore.all.count
   end
@@ -30,9 +31,14 @@ class AppEngineTest < Minitest::Test
 
   def test_create_new_idea
     post "/", {idea: {title: "exercise", description: "sign up for stick fighting classes"}}
- 
     idea = IdeaStore.all.first
-    assert_equal "exercise", idea.title
-    assert_equal "sign up for stick fighting classes", idea.description
+    idea_title = idea.title
+    assert_equal "exercise", idea_title
+  end
+
+  def test_count
+      post "/", {idea: {title: "exercise", description: "sign up for stick fighting classes"}}
+      idea_count = IdeaStore.all.count
+      assert_equal 1, idea_count
   end
 end

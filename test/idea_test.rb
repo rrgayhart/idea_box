@@ -9,6 +9,12 @@ ENV['RACK_ENV'] = 'test'
 class IdeaTest < Minitest::Test
   include Rack::Test::Methods
 
+  def setup
+    IdeaStore.environment = 'test_class'
+    IdeaStore.destroy_all
+    assert_equal 0, IdeaStore.all.count
+  end
+
   def test_idea_class_exists
     idea = Idea.new
     assert_kind_of Idea, idea
