@@ -23,6 +23,11 @@ class IdeaBoxApp < Sinatra::Base
      erb :index, locals: {ideas: IdeaStore.all.sort, idea: Idea.new}
   end
 
+  get '/:id' do |id|
+    idea = IdeaStore.find(id.to_i)
+    erb :idea, locals: {idea: idea}
+  end
+
   post '/' do
     IdeaStore.create(params[:idea])
     redirect '/'
