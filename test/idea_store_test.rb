@@ -15,4 +15,5 @@ class IdeaStoreTest < Minitest::Test
     assert_equal 0, IdeaStore.all.count
   end
 
+
 end
