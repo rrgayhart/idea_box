@@ -9,6 +9,7 @@ require "idea_store"
 
 class IdeaBoxApp < Sinatra::Base
   set :method_override, true
+  set :views, '/Users/rrgayhart/sites/sinatra/idea_box/lib/app/views/'
   configure :development do
     register Sinatra::Reloader
   end

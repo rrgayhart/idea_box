@@ -8,6 +8,7 @@ ENV['RACK_ENV'] = 'test'
 
 class AppEngineTest < Test::Unit::TestCase
   include Rack::Test::Methods
+  #set :view, '/views'
 
   def app
     IdeaBoxApp
