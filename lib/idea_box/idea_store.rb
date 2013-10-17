@@ -10,6 +10,26 @@ class IdeaStore
     ideas
   end
 
+  def self.destroy_all
+    File.write(idea_box_file_path, "")
+  end
+
+  def self.idea_box_file_path
+    if environment
+      "db/ideabox-#{environment}"
+    else
+      "db/ideabox"
+    end
+  end
+
+  def self.environment
+    @environment
+  end
+
+  def self.environment=(new_environment)
+    @environment = new_environment
+  end
+
   def self.raw_ideas
     database.transaction do |db|
       db['ideas'] || []
@@ -18,7 +38,7 @@ class IdeaStore
 
   def self.database
     return @database if @database
-    @database ||= YAML::Store.new('db/ideabox')
+    @database ||= YAML::Store.new(idea_box_file_path)
     @database.transaction do
       @database['ideas'] ||= []
     end

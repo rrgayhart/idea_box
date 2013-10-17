@@ -12,6 +12,12 @@ ENV['RACK_ENV'] = 'test'
 class AppEngineTest < Minitest::Test
   include Rack::Test::Methods
 
+  def setup
+    IdeaStore.environment = 'test'
+    IdeaStore.destroy_all
+    assert_equal 0, IdeaStore.all.count
+  end
+
   def app
     IdeaBoxApp
   end
