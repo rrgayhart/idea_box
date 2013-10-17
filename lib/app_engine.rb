@@ -3,13 +3,14 @@ require 'rubygems'
 require 'sinatra/base'
 require 'bundler'
 Bundler.require
-require "idea"
-require "idea_store"
+require "idea_box"
+#equire "idea_store"
 
 
 class IdeaBoxApp < Sinatra::Base
+  set :root, 'lib/app'
   set :method_override, true
-  set :views, '/Users/rrgayhart/sites/sinatra/idea_box/lib/app/views/'
+  #set :views, '/Users/rrgayhart/sites/sinatra/idea_box/lib/app/views/'
   configure :development do
     register Sinatra::Reloader
   end
