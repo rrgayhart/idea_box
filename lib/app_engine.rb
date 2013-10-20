@@ -10,7 +10,7 @@ require_relative "idea_box"
 class IdeaBoxApp < Sinatra::Base
   #set :root, './lib/app'
   set :method_override, true
-  set :root, '/Users/rrgayhart/sites/sinatra/idea_box/lib/app/'
+  set :root, 'lib/app/'
 
   configure :development do
     register Sinatra::Reloader
