@@ -3,3 +3,7 @@ h1 {
   font: 32px/1 Helvetica, Arial, sans-serif; 
   text-align: center;
 } 
+
+p {
+  font: 13px/1.4 Helvetica, Arial, sans-serif;
+}
