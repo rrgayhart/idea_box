@@ -10,6 +10,7 @@ require_relative "idea_box"
 
 class IdeaBoxApp < Sinatra::Base
   #set :root, './lib/app'
+  set :public_folder, 'public'
   set :method_override, true
   set :root, 'lib/app/'
 
