@@ -7,3 +7,4 @@ gem 'rack-test', require: false
 gem 'minitest'
 gem 'capybara'
 gem 'minitest-capybara'
+gem 'slim'

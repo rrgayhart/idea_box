@@ -1,6 +1,7 @@
 require 'rubygems'
 #require 'bundler/setup'
 require 'sinatra/base'
+require 'slim'
 require 'bundler'
 Bundler.require
 require_relative "idea_box"
