@@ -24,11 +24,10 @@ class AppEngineTest < Minitest::Test
   end
 
   def test_each_idea_has_an_index_page
-    skip
     post "/", {idea: {title: "exercise", description: "sign up for stick fighting classes"}}
     get '/0'
-    assert last_response.ok
-    assert_equal "fake stub to find body", lastresponse.body
+    assert last_response.ok?
+    assert last_response.body =~ /exercise/
   end
   
   def test_it_moves_to_index
