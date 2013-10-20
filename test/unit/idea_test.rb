@@ -1,18 +1,10 @@
-gem 'minitest'
-require 'minitest/autorun'
-require 'minitest/pride'
-require 'rack/test'
-require_relative '../../lib/idea_box'
-
-ENV['RACK_ENV'] = 'test'
+require_relative '../helpers/unit_helper'
 
 class IdeaTest < Minitest::Test
   include Rack::Test::Methods
 
   def setup
-    IdeaStore.environment = 'test_engine'
-    IdeaStore.destroy_all
-    assert_equal 0, IdeaStore.all.count
+    setup_all
   end
 
   def test_idea_class_exists
