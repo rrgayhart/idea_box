@@ -20,13 +20,15 @@ class UserAcceptanceTest < Minitest::Test
     fill_in 'idea[description]', :with => 'chocolate chip cookies'
     click_button 'Save'
     assert page.has_content?("chocolate chip cookies"), "Idea is not on page"
-  end
+    #confirms that you can save an idea
 
-  def test_manage_idea_view
-    idea = Idea.new({"title" => "run", "description" => "at least one mile per day", "rank" => 1})
-    idea.save
     visit '/0'
-    assert page.has_content?("run")
+    assert page.has_content?("chocolate")
+    assert page.has_content?("Edit")
+    assert page.has_content?("IdeaBox")
+    click_button "+"
+    assert page.has_content?("Number")
+    #tests that liking a page stays on the index page
   end
 
 end
