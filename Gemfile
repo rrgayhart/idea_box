@@ -5,3 +5,5 @@ gem 'sinatra-contrib', require: 'sinatra/reloader'
 gem 'rack'
 gem 'rack-test', require: false
 gem 'minitest'
+gem 'capybara'
+gem 'minitest-capybara'
