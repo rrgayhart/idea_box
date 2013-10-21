@@ -22,7 +22,7 @@ class AppEngineTest < Minitest::Test
     get '/'
     assert last_response.ok?
     assert_equal 200, last_response.status
-    assert last_response.body =~ /Welcome/
+    assert last_response.body =~ /Existing/
   end
 
   def test_create_new_idea

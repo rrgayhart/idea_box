@@ -9,7 +9,6 @@ html {
 h1 {
   margin: 0;
   font-size: 50px;
-  color: #222;
 }
 
 h2 {
@@ -18,6 +17,30 @@ h2 {
 
 a {
   text-decoration: none;
+  color: #000;
+}
+
+a:hover {
+  color: #FFF;
+}
+
+li.ideaitem {
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  margin-right: 25px;
+  background: #FFF;
+  font-size: 20px;
+  list-style:none;
+}
+
+li.ideaitem:hover {
+  background: #D7FFEB;
+  color: #000;
+}
+
+div.tab {
+  padding-left: 25px;
+  font-size: 18px;
 }
 
 .logo1 {
@@ -27,7 +50,7 @@ a {
 #wrap {
   width:750px;
   margin:0 auto;
-  background: #CDFFE6;
+  background: #D7FFEB;
 }
 
 #header {
@@ -58,17 +81,18 @@ a {
 #main {
   float:left;
   width:480px;
-  padding: 10px;
+  padding: 10px 5px 15px 15px;
   background: #ddd;
-  border-width: 10px;
-  border-color: #A4CCB8;
 }
 
 #sidebar {
   float: right;
   width: 230px;
-  padding: 10px;
-  background: #CDFFE6;
+  background: #D7FFEB;
+}
+
+div.form {
+  margin: 25px;
 }
 
 #footer {

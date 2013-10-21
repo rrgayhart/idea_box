@@ -2,10 +2,10 @@
 
 <ul>
   <% ideas.each do |idea| %>
-    <li>
-      <a href="/<%= idea.id %>"><%= idea.title %><br/></a>
-      <%= idea.description %>
-    </li>
+    <a href="/<%= idea.id %>"><li class="ideaitem">
+      <%= idea.title %>
+      <div class="tab"><%= idea.description %></div>
+    </li></a>
   <% end %>
 </ul>
 
