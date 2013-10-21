@@ -1,4 +1,7 @@
 ---
 ideas:
-- title: Another Breakfast
-  description: Don't you not go to Jelly someday
+- title: All the Breakfast
+  description: Eat it.
+  rank: 1
+- title: Do it!
+  description: Eat the breakfast

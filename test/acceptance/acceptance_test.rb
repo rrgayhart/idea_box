@@ -11,7 +11,7 @@ class UserAcceptanceTest < Minitest::Test
 
   def test_it_doesnt_blow_up
     visit '/'
-    assert page.has_content?("Welcome")
+    assert page.has_content?("IdeaBox")
   end
 
   def test_manage_ideas

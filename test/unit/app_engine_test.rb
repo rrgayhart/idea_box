@@ -22,16 +22,7 @@ class AppEngineTest < Minitest::Test
     get '/'
     assert last_response.ok?
     assert_equal 200, last_response.status
-    assert last_response.body =~ /Welcome/
-  end
-
-  def test_it_moves_to_edit
-    post "/", {idea: {title: "exercise", description: "sign up for stick fighting classes"}}
-    get '/0/edit'
-    assert last_response.ok?
-    assert_equal 200, last_response.status
-    assert last_response.body =~ /Edit your Idea:/
-    assert last_response.body =~ /exercise/
+    assert last_response.body =~ /IdeaBox/
   end
 
   def test_create_new_idea

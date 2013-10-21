@@ -40,11 +40,6 @@ class IdeaBoxApp < Sinatra::Base
     redirect '/'
   end
 
-  get '/:id/edit' do |id|
-    idea = IdeaStore.find(id.to_i)
-    erb :edit, locals: {idea: idea}
-  end
-
   put '/:id' do |id|
     IdeaStore.update(id.to_i, params[:idea])
     redirect '/'

@@ -6,7 +6,25 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <%= yield %>
+    <div id="wrap">
+      <div id="header">
+        <a href="/"><h1>IdeaBox</h1></a>
+      </div>
+      <div id="nav">
+        <ul>
+          <li>Option 1</li>
+          <li>Option 2</li>
+        </ul>
+      </div>
+      <div id="main">
+          <%= yield %>
+      </div>
+      <div id="sidebar">
+        <%= erb :form, locals: {idea: idea} %>
+      </div>
+      <div id="footer">
+        <img class="logo" src="/images/Edison_incandescent_lights.jpg" alt="bulbs">
+      </div>
+    </div>
   </body>
 </html>
-
