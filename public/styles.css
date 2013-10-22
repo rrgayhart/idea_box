@@ -1,5 +1,6 @@
 body,
 html {
+  font-family: 'Open Sans', sans-serif;
   margin:0;
   padding:0;
   color:#000;
@@ -24,10 +25,15 @@ a:hover {
   color: #FFF;
 }
 
+ul.idealist {
+  padding: 0px;
+}
+
 li.ideaitem {
-  padding: 5px 10px;
+  padding: 5px 5px;
   margin-bottom: 10px;
-  margin-right: 25px;
+  margin-right: 30px;
+  margin-left: 25px;
   background: #FFF;
   font-size: 20px;
   list-style:none;
@@ -89,6 +95,7 @@ div.tab {
   float: right;
   width: 230px;
   background: #D7FFEB;
+  font-size: 20px;
 }
 
 div.form {
