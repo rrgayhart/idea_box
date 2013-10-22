@@ -44,6 +44,10 @@ li.ideaitem:hover {
   color: #000;
 }
 
+div.ideashowpage {
+  margin: 30px;
+}
+
 div.tab {
   padding-left: 25px;
   font-size: 18px;

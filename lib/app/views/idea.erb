@@ -1,6 +1,6 @@
+<div class="ideashowpage"
 <h3><%= idea.title %> </h3>
 <em><%= idea.description %></em>
-
 <p>Number of likes: <%= idea.rank %> </p>
 <form action='/<%= idea.id %>/like' method='POST' style="display: inline">
   <input type='submit' value="+"/>
@@ -9,5 +9,5 @@
   <input type="hidden" name="_method" value="DELETE">
   <input type='submit' value="delete"/>
 </form>
-
+</div>
 
